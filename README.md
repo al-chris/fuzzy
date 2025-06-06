@@ -1,94 +1,78 @@
-# Fuzzy Logic Examples in Python
+# Fuzzy Logic & Image Processing Examples in Python
 
-This project contains two simple Python implementations of fuzzy logic systems using the `scikit-fuzzy` library:
+This project contains several Python implementations of fuzzy logic systems and a simple image processing example. It demonstrates fuzzy decision-making and basic computer vision, with both command-line and GUI interfaces.
 
-1. **Fan Speed Controller** – Adjusts fan speed based on room temperature.
-2. **Restaurant Tip Calculator** – Suggests tip amount based on food quality and service level.
+## Main Features
 
-These examples demonstrate how fuzzy logic can be used for approximate reasoning and decision-making, mimicking human intuition.
-
----
-
-## Features
-
-* Uses `scikit-fuzzy` to create fuzzy variables and rule-based systems.
-* Defines custom membership functions for each input/output variable.
-* Includes visualization of fuzzy sets and outputs.
-* Shows how to fuzzify inputs and defuzzify the output.
+- **Fan Speed Controller** – Adjusts fan speed based on room temperature using fuzzy logic.
+- **Restaurant Tip Calculator** – Suggests tip amount based on food and service quality.
+- **AI Decision Making (Loan Approval)** – Uses fuzzy logic to estimate loan approval likelihood based on income and credit score.
+- **Image Processing** – Demonstrates edge detection on images using OpenCV.
+- **Graphical User Interfaces (GUI)** – Interactive GUIs for all fuzzy logic examples (see `gui/` folder).
 
 ---
 
 ## Requirements
 
-* Python 3.6 or higher
-* `scikit-fuzzy`
-* `numpy`
-* `matplotlib`
+- Python 3.6 or higher
+- `scikit-fuzzy`
+- `numpy`
+- `matplotlib`
+- `opencv-python` (for image processing)
+- `tkinter` (for GUIs, included with most Python installations)
 
 ### Installation
 
 Install dependencies with:
 
 ```bash
-pip install scikit-fuzzy matplotlib numpy
+pip install scikit-fuzzy matplotlib numpy opencv-python
 ```
 
 ---
 
-## Example 1: Fan Speed Controller
+## Examples
 
-### Description
-
+### 1. Fan Speed Controller
 Controls fan speed based on room temperature using fuzzy logic.
+- **Run (CLI):**
+  ```bash
+  python fan_controller.py
+  ```
+- **Run (GUI):**
+  ```bash
+  python gui/fan_controller_gui.py
+  ```
 
-### Input
+### 2. Restaurant Tip Calculator
+Estimates tip percentage based on food and service quality.
+- **Run (CLI):**
+  ```bash
+  python tip_calculator.py
+  ```
+- **Run (GUI):**
+  ```bash
+  python gui/tip_calculator_gui.py
+  ```
 
-* Temperature (°C)
+### 3. AI Decision Making (Loan Approval)
+Estimates loan approval likelihood based on income and credit score.
+- **Run (CLI):**
+  ```bash
+  python ai_decision_making.py
+  ```
+- **Run (GUI):**
+  ```bash
+  python gui/ai_decision_making_gui.py
+  ```
 
-### Output
-
-* Fan Speed (%)
-
-### Fuzzy Rules
-
-* IF temperature is **cold**, THEN fan speed is **low**
-* IF temperature is **warm**, THEN fan speed is **medium**
-* IF temperature is **hot**, THEN fan speed is **high**
-
-### Run
-
-```bash
-python fan_controller.py
-```
-
----
-
-## Example 2: Restaurant Tip Calculator
-
-### Description
-
-Estimates the tip percentage based on the quality of food and service at a restaurant.
-
-### Inputs
-
-* Food quality (0–10)
-* Service quality (0–10)
-
-### Output
-
-* Tip amount (%)
-
-### Fuzzy Rules
-
-* IF food is **poor** OR service is **poor**, THEN tip is **low**
-* IF service is **average**, THEN tip is **medium**
-* IF food is **good** OR service is **good**, THEN tip is **high**
-
-### Run
-
-```bash
-python tip_calculator.py
-```
+### 4. Image Processing Example
+Performs edge detection on a sample image using OpenCV.
+- **Run:**
+  ```bash
+  python image_processing.py
+  ```
+  (Make sure the image path in the script matches an image in the `images/` folder.)
 
 ---
 
@@ -96,28 +80,38 @@ python tip_calculator.py
 
 ```
 .
-├── fan_controller.py      # Fan speed controller using fuzzy logic
-├── tip_calculator.py      # Restaurant tip calculator using fuzzy logic
-├── README.md              # Project documentation
+├── ai_decision_making.py         # Fuzzy loan approval (CLI)
+├── fan_controller.py             # Fan speed controller (CLI)
+├── tip_calculator.py             # Restaurant tip calculator (CLI)
+├── image_processing.py           # Image edge detection example
+├── gui/
+│   ├── ai_decision_making_gui.py # Loan approval GUI
+│   ├── fan_controller_gui.py     # Fan controller GUI
+│   └── tip_calculator_gui.py     # Tip calculator GUI
+├── images/                       # Sample images for processing
+├── README.md                     # Project documentation
+├── pyproject.toml                # Project dependencies
 ```
 
 ---
 
-## Customization
+## Customization & Extensions
 
 These systems can be extended to handle additional inputs, outputs, or more complex rules. Example applications:
 
-* Smart thermostats
-* Vehicle speed control
-* Risk assessment
-* Health monitoring systems
+- Smart thermostats
+- Vehicle speed control
+- Risk assessment
+- Health monitoring systems
+- Computer vision tasks
 
 ---
 
 ## References
 
-* [Scikit-Fuzzy GitHub](https://github.com/scikit-fuzzy/scikit-fuzzy)
-* [Fuzzy Logic - Wikipedia](https://en.wikipedia.org/wiki/Fuzzy_logic)
+- [Scikit-Fuzzy GitHub](https://github.com/scikit-fuzzy/scikit-fuzzy)
+- [Fuzzy Logic - Wikipedia](https://en.wikipedia.org/wiki/Fuzzy_logic)
+- [OpenCV Documentation](https://docs.opencv.org/)
 
 ---
 
