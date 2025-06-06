@@ -8,6 +8,7 @@ dependencies = [
     "matplotlib>=3.10.3",
     "networkx>=3.5",
     "numpy>=2.2.6",
+    "opencv-python>=4.11.0.86",
     "packaging>=25.0",
     "scikit-fuzzy>=0.5.0",
     "scipy>=1.15.3",
